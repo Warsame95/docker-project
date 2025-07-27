@@ -6,7 +6,13 @@ r = Redis(host='localhost', port=6379, decode_responses=True)
 
 @app.route("/")
 def index():
-    return "<h1>Hello, World!</h1>"
+    html = """
+    <h1>Welcome to my flask app.</h1>
+    <form action="/count">
+             <button type="submit">Go to Counter</button>
+    </form>
+    """
+    return html
 
 @app.route("/count")
 def count():
