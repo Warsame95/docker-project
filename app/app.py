@@ -2,7 +2,7 @@ from flask import Flask
 from redis import Redis
 
 app = Flask(__name__)
-r = Redis(host='localhost', port=6379, decode_responses=True)
+r = Redis(host='my-redis', port=6379, decode_responses=True)
 
 @app.route("/")
 def index():
