@@ -9,4 +9,9 @@ services:
   redis:
     image: redis
     hostname: my-redis
+    volumes: 
+      - redis-data:/data
+  
+volumes:
+  redis-data:
 
